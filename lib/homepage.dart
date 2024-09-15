@@ -9,10 +9,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   bool _KelasMerakit = false;
   bool _KelasAnimasi = false;
   bool _KelasKoding = false;
+  String? _selectedOption;
 
   @override
   Widget build(BuildContext context) {
@@ -1115,28 +1115,258 @@ class _HomePageState extends State<HomePage> {
                                 height: deviceWidth * 0.02,
                               ),
                               Container(
-                                child: Row(
-                                  children: [
-                                    Checkbox(
-                                        value: _KelasMerakit,
-                                        onChanged: (bool? value) {
-                                          setState(() {
-                                            _KelasMerakit = value ?? false;
-                                          });
-                                        }),
-                                    Text(
+                                margin: EdgeInsets.only(left: 170, right: 50),
+                                width: deviceWidth,
+                                child: Text(
+                                  "Kelas yang diminati:",
+                                  style: TextStyle(
+                                    fontSize: deviceWidth * 0.01,
+                                    fontFamily: "Poppins",
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                  margin: EdgeInsets.only(left: 170, right: 50),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        child: Row(
+                                          children: [
+                                            Theme(
+                                              data: Theme.of(context).copyWith(
+                                                  checkboxTheme: CheckboxThemeData(
+                                                      side: BorderSide(
+                                                          width: 2,
+                                                          color: Colors.white),
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          4)))),
+                                              child: Checkbox(
+                                                  activeColor: Colors.white,
+                                                  checkColor: Colors.black,
+                                                  value: _KelasMerakit,
+                                                  onChanged: (bool? value) {
+                                                    setState(() {
+                                                      _KelasMerakit =
+                                                          value ?? false;
+                                                    });
+                                                  }),
+                                            ),
+                                            Text(
+                                              textAlign: TextAlign.center,
+                                              "Kelas Merakit Robot",
+                                              style: TextStyle(
+                                                fontSize: deviceWidth * 0.01,
+                                                fontFamily: "Poppins",
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: deviceWidth * 0.02,
+                                      ),
+                                      Container(
+                                        child: Row(
+                                          children: [
+                                            Theme(
+                                              data: Theme.of(context).copyWith(
+                                                  checkboxTheme: CheckboxThemeData(
+                                                      side: BorderSide(
+                                                          width: 2,
+                                                          color: Colors.white),
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          4)))),
+                                              child: Checkbox(
+                                                  activeColor: Colors.white,
+                                                  checkColor: Colors.black,
+                                                  value: _KelasAnimasi,
+                                                  onChanged: (bool? value) {
+                                                    setState(() {
+                                                      _KelasAnimasi =
+                                                          value ?? false;
+                                                    });
+                                                  }),
+                                            ),
+                                            Text(
+                                              textAlign: TextAlign.center,
+                                              "Kelas Animasi Robotik",
+                                              style: TextStyle(
+                                                fontSize: deviceWidth * 0.01,
+                                                fontFamily: "Poppins",
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: deviceWidth * 0.02,
+                                      ),
+                                      Container(
+                                        child: Row(
+                                          children: [
+                                            Theme(
+                                              data: Theme.of(context).copyWith(
+                                                  checkboxTheme: CheckboxThemeData(
+                                                      side: BorderSide(
+                                                          width: 2,
+                                                          color: Colors.white),
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          4)))),
+                                              child: Checkbox(
+                                                  activeColor: Colors.white,
+                                                  checkColor: Colors.black,
+                                                  value: _KelasKoding,
+                                                  onChanged: (bool? value) {
+                                                    setState(() {
+                                                      _KelasKoding =
+                                                          value ?? false;
+                                                    });
+                                                  }),
+                                            ),
+                                            Text(
+                                              textAlign: TextAlign.center,
+                                              "Kelas Koding",
+                                              style: TextStyle(
+                                                fontSize: deviceWidth * 0.01,
+                                                fontFamily: "Poppins",
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  )),
+                              SizedBox(
+                                height: deviceWidth * 0.02,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 170, right: 50),
+                                width: deviceWidth,
+                                child: Text(
+                                  "Metode Pembelajaran:",
+                                  style: TextStyle(
+                                    fontSize: deviceWidth * 0.01,
+                                    fontFamily: "Poppins",
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                  margin: EdgeInsets.only(left: 170, right: 50),
+                                  width: deviceWidth,
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: deviceWidth * 0.3,
+                                        child: ListTile(
+                                          title: Text(
+                                            "Private",
+                                            style: TextStyle(
+                                              fontSize: deviceWidth * 0.01,
+                                              fontFamily: "Poppins",
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          leading: Radio<String>(
+                                            value: "Privat",
+                                            groupValue: _selectedOption,
+                                            onChanged: (String? value) {
+                                              setState(() {
+                                                _selectedOption = value;
+                                              });
+                                            },
+                                            fillColor: WidgetStateProperty
+                                                .resolveWith<Color>(
+                                                    (Set<WidgetState> states) {
+                                              if (states.contains(
+                                                  WidgetState.selected)) {
+                                                return Colors
+                                                    .white; // Color when selected
+                                              }
+                                              return Colors
+                                                  .white; // Color when not selected
+                                            }),
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: deviceWidth * 0.3,
+                                        child: ListTile(
+                                          title: Text(
+                                            "Online",
+                                            style: TextStyle(
+                                              fontSize: deviceWidth * 0.01,
+                                              fontFamily: "Poppins",
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          leading: Radio<String>(
+                                            value: "Online",
+                                            groupValue: _selectedOption,
+                                            onChanged: (String? value) {
+                                              setState(() {
+                                                _selectedOption = value;
+                                              });
+                                            },
+                                            fillColor: WidgetStateProperty
+                                                .resolveWith<Color>(
+                                                    (Set<WidgetState> states) {
+                                              if (states.contains(
+                                                  WidgetState.selected)) {
+                                                return Colors
+                                                    .white; // Color when selected
+                                              }
+                                              return Colors
+                                                  .white; // Color when not selected
+                                            }),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  )),
+                              SizedBox(
+                                height: deviceWidth * 0.02,
+                              ),
+                              ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.yellow),
+                                  onPressed: () {},
+                                  child: Container(
+                                    child: Text(
                                       textAlign: TextAlign.center,
-                                      "Kelas Merakit Robot",
+                                      "Daftar!",
                                       style: TextStyle(
-                                        fontSize: deviceWidth * 0.01,
+                                        fontSize: deviceWidth * 0.015,
                                         fontFamily: "Poppins",
-                                        color: Colors.white,
+                                        color: Color(0xFF16325B),
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                  ],
-                                ),
-                              )
+                                  )),
                             ],
                           ),
                         ),
