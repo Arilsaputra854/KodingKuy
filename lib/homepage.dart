@@ -9,6 +9,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  bool _KelasMerakit = false;
+  bool _KelasAnimasi = false;
+  bool _KelasKoding = false;
+
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
@@ -78,8 +83,7 @@ class _HomePageState extends State<HomePage> {
                                         fontFamily: "Poppins",
                                         color: Colors.yellow,
                                         fontWeight: FontWeight.bold,
-                                        fontStyle: FontStyle
-                                            .italic, // Remove italic for bold text
+                                        fontStyle: FontStyle.italic,
                                       ),
                                     ),
                                     TextSpan(
@@ -169,7 +173,6 @@ class _HomePageState extends State<HomePage> {
                                 fontFamily: "Poppins",
                                 color: Colors.yellow,
                                 fontWeight: FontWeight.bold,
-                                // Remove italic for bold text
                               ),
                             ),
                             SizedBox(
@@ -182,8 +185,7 @@ class _HomePageState extends State<HomePage> {
                                 fontSize: deviceWidth * 0.02,
                                 fontFamily: "Poppins",
                                 color: Colors.white,
-                                fontWeight: FontWeight
-                                    .normal, // Remove italic for bold text
+                                fontWeight: FontWeight.normal,
                               ),
                             ),
                             Row(
@@ -254,7 +256,6 @@ class _HomePageState extends State<HomePage> {
                                 fontFamily: "Poppins",
                                 color: Colors.yellow,
                                 fontWeight: FontWeight.bold,
-                                // Remove italic for bold text
                               ),
                             ),
                             SizedBox(
@@ -270,8 +271,7 @@ class _HomePageState extends State<HomePage> {
                                     fontSize: deviceWidth * 0.02,
                                     fontFamily: "Poppins",
                                     color: Colors.white,
-                                    fontWeight: FontWeight
-                                        .bold, // Remove italic for bold text
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
@@ -281,8 +281,7 @@ class _HomePageState extends State<HomePage> {
                                     fontSize: deviceWidth * 0.02,
                                     fontFamily: "Poppins",
                                     color: Colors.white,
-                                    fontWeight: FontWeight
-                                        .normal, // Remove italic for bold text
+                                    fontWeight: FontWeight.normal,
                                   ),
                                 ),
                                 Text(
@@ -292,8 +291,7 @@ class _HomePageState extends State<HomePage> {
                                     fontSize: deviceWidth * 0.02,
                                     fontFamily: "Poppins",
                                     color: Colors.white,
-                                    fontWeight: FontWeight
-                                        .bold, // Remove italic for bold text
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
@@ -303,8 +301,7 @@ class _HomePageState extends State<HomePage> {
                                     fontSize: deviceWidth * 0.02,
                                     fontFamily: "Poppins",
                                     color: Colors.white,
-                                    fontWeight: FontWeight
-                                        .normal, // Remove italic for bold text
+                                    fontWeight: FontWeight.normal,
                                   ),
                                 ),
                                 Text(
@@ -314,8 +311,7 @@ class _HomePageState extends State<HomePage> {
                                     fontSize: deviceWidth * 0.02,
                                     fontFamily: "Poppins",
                                     color: Colors.white,
-                                    fontWeight: FontWeight
-                                        .bold, // Remove italic for bold text
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
@@ -325,8 +321,7 @@ class _HomePageState extends State<HomePage> {
                                     fontSize: deviceWidth * 0.02,
                                     fontFamily: "Poppins",
                                     color: Colors.white,
-                                    fontWeight: FontWeight
-                                        .normal, // Remove italic for bold text
+                                    fontWeight: FontWeight.normal,
                                   ),
                                 ),
                                 Text(
@@ -336,8 +331,7 @@ class _HomePageState extends State<HomePage> {
                                     fontSize: deviceWidth * 0.02,
                                     fontFamily: "Poppins",
                                     color: Colors.white,
-                                    fontWeight: FontWeight
-                                        .bold, // Remove italic for bold text
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
@@ -347,8 +341,7 @@ class _HomePageState extends State<HomePage> {
                                     fontSize: deviceWidth * 0.02,
                                     fontFamily: "Poppins",
                                     color: Colors.white,
-                                    fontWeight: FontWeight
-                                        .normal, // Remove italic for bold text
+                                    fontWeight: FontWeight.normal,
                                   ),
                                 ),
                               ],
@@ -384,7 +377,6 @@ class _HomePageState extends State<HomePage> {
                                 fontFamily: "Poppins",
                                 color: Colors.yellow,
                                 fontWeight: FontWeight.bold,
-                                // Remove italic for bold text
                               ),
                             ),
                             SizedBox(
@@ -394,81 +386,762 @@ class _HomePageState extends State<HomePage> {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Expanded(
-                                  child: Column(
-                                    children: [
-                                      Image.asset(
-                                        "assets/mrt_logo.png",
-                                        width: deviceWidth * 0.2,
-                                      ),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Text(
-                                        textAlign: TextAlign.center,
-                                        "Program ini mengajak anak-anakuntuk merakit robot menggunakan blok MRT. Selain meningkatkan keterampilan logika, kegiatan ini juga merangsang kreativitas dan keterampilan motorik halus",
-                                        style: TextStyle(
-                                          fontSize: deviceWidth * 0.015,
-                                          fontFamily: "Poppins",
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.normal,
-                                          // Remove italic for bold text
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                    child: Card(
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(50))),
+                                        color:
+                                            Color.fromRGBO(255, 255, 255, 200),
+                                        child: Container(
+                                          padding: EdgeInsets.all(
+                                              deviceWidth * 0.008),
+                                          child: Column(
+                                            children: [
+                                              SizedBox(
+                                                height: deviceWidth * 0.03,
+                                              ),
+                                              Image.asset(
+                                                "assets/mrt_logo.png",
+                                                width: deviceWidth * 0.15,
+                                              ),
+                                              SizedBox(
+                                                height: deviceWidth * 0.005,
+                                              ),
+                                              Text(
+                                                textAlign: TextAlign.center,
+                                                "KELAS MERAKIT ROBOT",
+                                                style: TextStyle(
+                                                  fontSize: deviceWidth * 0.015,
+                                                  fontFamily: "Poppins",
+                                                  color: Colors.yellow,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: deviceWidth * 0.003,
+                                              ),
+                                              Text(
+                                                textAlign: TextAlign.center,
+                                                "Program ini mengajak anak-anak merakit robot dengan blok MRT, meningkatkan logika, kreativitas, dan keterampilan motorik halus.",
+                                                style: TextStyle(
+                                                  fontSize: deviceWidth * 0.015,
+                                                  fontFamily: "Poppins",
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: deviceWidth * 0.05,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                          backgroundColor:
+                                                              Colors.yellow),
+                                                  onPressed: () {},
+                                                  child: Container(
+                                                    child: Text(
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      "SELENGKAPNYA",
+                                                      style: TextStyle(
+                                                        fontSize:
+                                                            deviceWidth * 0.015,
+                                                        fontFamily: "Poppins",
+                                                        color:
+                                                            Color(0xFF16325B),
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                      ),
+                                                    ),
+                                                  )),
+                                              SizedBox(
+                                                height: deviceWidth * 0.02,
+                                              ),
+                                            ],
+                                          ),
+                                        ))),
+                                SizedBox(
+                                  width: deviceWidth * 0.02,
                                 ),
                                 Expanded(
-                                    child: Column(
-                                  children: [
-                                    Image.asset(
-                                      "assets/scratch_logo.png",
-                                      width: deviceWidth * 0.2,
-                                    ),
-                                    SizedBox(
-                                      height: 20,
-                                    ),
-                                    Text(
-                                      textAlign: TextAlign.center,
-                                      "Scratch adalah platform visual yang sangat cocok untuk anak-anak yang baru mulai belajar coding. Dalam program ini, anak-anak akan belajar membuat game interaktif sendiri dengan kode blok yang mudah dipahami.",
-                                      style: TextStyle(
-                                        fontSize: deviceWidth * 0.015,
-                                        fontFamily: "Poppins",
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.normal,
-                                        // Remove italic for bold text
-                                      ),
-                                    ),
-                                  ],
-                                )),
+                                    child: Card(
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(50))),
+                                        color:
+                                            Color.fromRGBO(255, 255, 255, 200),
+                                        child: Container(
+                                          padding: EdgeInsets.all(
+                                              deviceWidth * 0.008),
+                                          child: Column(
+                                            children: [
+                                              SizedBox(
+                                                height: deviceWidth * 0.03,
+                                              ),
+                                              Image.asset(
+                                                "assets/scratch_logo.png",
+                                                width: deviceWidth * 0.15,
+                                              ),
+                                              SizedBox(
+                                                height: deviceWidth * 0.005,
+                                              ),
+                                              Text(
+                                                textAlign: TextAlign.center,
+                                                "KELAS ANIMASI ROBOTIK",
+                                                style: TextStyle(
+                                                  fontSize: deviceWidth * 0.015,
+                                                  fontFamily: "Poppins",
+                                                  color: Colors.yellow,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: deviceWidth * 0.003,
+                                              ),
+                                              Text(
+                                                textAlign: TextAlign.center,
+                                                "Scratch adalah platform visual yang ramah anak untuk belajar coding, memungkinkan mereka membuat game interaktif dengan kode blok yang mudah dipahami.",
+                                                style: TextStyle(
+                                                  fontSize: deviceWidth * 0.015,
+                                                  fontFamily: "Poppins",
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: deviceWidth * 0.05,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                          backgroundColor:
+                                                              Colors.yellow),
+                                                  onPressed: () {},
+                                                  child: Container(
+                                                    child: Text(
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      "SELENGKAPNYA",
+                                                      style: TextStyle(
+                                                        fontSize:
+                                                            deviceWidth * 0.015,
+                                                        fontFamily: "Poppins",
+                                                        color:
+                                                            Color(0xFF16325B),
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                      ),
+                                                    ),
+                                                  )),
+                                              SizedBox(
+                                                height: deviceWidth * 0.02,
+                                              ),
+                                            ],
+                                          ),
+                                        ))),
+                                SizedBox(
+                                  width: deviceWidth * 0.02,
+                                ),
                                 Expanded(
-                                    child: Column(
-                                  children: [
-                                    Image.asset(
-                                      "assets/python_logo.png",
-                                      width: deviceWidth * 0.2,
-                                    ),
-                                    SizedBox(
-                                      height: 20,
-                                    ),
-                                    Text(
-                                      textAlign: TextAlign.center,
-                                      "Python adalah bahasa pemrograman yang banyak digunakan di dunia nyata. Dalam program ini, anak-anak dan remaja akan diajarkan bagaimana membuat program sederhana dengan Python yang dapat membantu mereka memahami logika coding lebih mendalam.",
-                                      style: TextStyle(
-                                        fontSize: deviceWidth * 0.015,
-                                        fontFamily: "Poppins",
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.normal,
-                                        // Remove italic for bold text
-                                      ),
-                                    ),
-                                  ],
-                                )),
+                                    child: Card(
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(50))),
+                                        color:
+                                            Color.fromRGBO(255, 255, 255, 200),
+                                        child: Container(
+                                          padding: EdgeInsets.all(
+                                              deviceWidth * 0.008),
+                                          child: Column(
+                                            children: [
+                                              SizedBox(
+                                                height: deviceWidth * 0.03,
+                                              ),
+                                              Image.asset(
+                                                "assets/python_logo.png",
+                                                width: deviceWidth * 0.15,
+                                              ),
+                                              SizedBox(
+                                                height: deviceWidth * 0.005,
+                                              ),
+                                              Text(
+                                                textAlign: TextAlign.center,
+                                                "KELAS KODING",
+                                                style: TextStyle(
+                                                  fontSize: deviceWidth * 0.015,
+                                                  fontFamily: "Poppins",
+                                                  color: Colors.yellow,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: deviceWidth * 0.003,
+                                              ),
+                                              Text(
+                                                textAlign: TextAlign.center,
+                                                "Kelas belajar Python adalah program untuk mempelajari dasar-dasar pemrograman Python, termasuk sintaks, struktur data, dan pembuatan proyek sederhana.",
+                                                style: TextStyle(
+                                                  fontSize: deviceWidth * 0.015,
+                                                  fontFamily: "Poppins",
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: deviceWidth * 0.05,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                          backgroundColor:
+                                                              Colors.yellow),
+                                                  onPressed: () {},
+                                                  child: Container(
+                                                    child: Text(
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      "SELENGKAPNYA",
+                                                      style: TextStyle(
+                                                        fontSize:
+                                                            deviceWidth * 0.015,
+                                                        fontFamily: "Poppins",
+                                                        color:
+                                                            Color(0xFF16325B),
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                      ),
+                                                    ),
+                                                  )),
+                                              SizedBox(
+                                                height: deviceWidth * 0.02,
+                                              ),
+                                            ],
+                                          ),
+                                        ))),
                               ],
                             )
                           ],
                         ),
                       ),
                     ]),
+                    //page 5
+                    Stack(children: [
+                      Positioned(
+                        bottom: 0,
+                        left: 0,
+                        child: Image.asset(
+                          "assets/shape_left.png",
+                          width: deviceWidth * 0.20,
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 50, right: 50),
+                        width: deviceWidth,
+                        height: deviceHeight,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: 30,
+                            ),
+                            Text(
+                              "Program Pembelajaran",
+                              style: TextStyle(
+                                fontSize: deviceWidth * 0.03,
+                                fontFamily: "Poppins",
+                                color: Colors.yellow,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Container(
+                              width: deviceWidth * 0.5,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Expanded(
+                                      child: Card(
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(50))),
+                                          color: Color.fromRGBO(
+                                              255, 255, 255, 200),
+                                          child: Container(
+                                            padding: EdgeInsets.all(
+                                                deviceWidth * 0.008),
+                                            child: Column(
+                                              children: [
+                                                SizedBox(
+                                                  height: deviceWidth * 0.03,
+                                                ),
+                                                Image.asset(
+                                                  "assets/picture_6.png",
+                                                  width: deviceWidth * 0.15,
+                                                ),
+                                                SizedBox(
+                                                  height: deviceWidth * 0.005,
+                                                ),
+                                                Text(
+                                                  textAlign: TextAlign.center,
+                                                  "PRIVAT",
+                                                  style: TextStyle(
+                                                    fontSize:
+                                                        deviceWidth * 0.015,
+                                                    fontFamily: "Poppins",
+                                                    color: Colors.yellow,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: deviceWidth * 0.003,
+                                                ),
+                                                Text(
+                                                  textAlign: TextAlign.center,
+                                                  "Trainer akan datang ke rumah siswa untuk memberikan pembelajaran, memungkinkan bimbingan langsung dan maksimal saat siswa menghadapi kesulitan.",
+                                                  style: TextStyle(
+                                                    fontSize:
+                                                        deviceWidth * 0.015,
+                                                    fontFamily: "Poppins",
+                                                    color: Colors.white,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: deviceWidth * 0.05,
+                                                ),
+                                              ],
+                                            ),
+                                          ))),
+                                  SizedBox(
+                                    width: deviceWidth * 0.02,
+                                  ),
+                                  Expanded(
+                                      child: Card(
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(50))),
+                                          color: Color.fromRGBO(
+                                              255, 255, 255, 200),
+                                          child: Container(
+                                            padding: EdgeInsets.all(
+                                                deviceWidth * 0.008),
+                                            child: Column(
+                                              children: [
+                                                SizedBox(
+                                                  height: deviceWidth * 0.03,
+                                                ),
+                                                Image.asset(
+                                                  "assets/picture_7.png",
+                                                  width: deviceWidth * 0.15,
+                                                ),
+                                                SizedBox(
+                                                  height: deviceWidth * 0.005,
+                                                ),
+                                                Text(
+                                                  textAlign: TextAlign.center,
+                                                  "ONLINE",
+                                                  style: TextStyle(
+                                                    fontSize:
+                                                        deviceWidth * 0.015,
+                                                    fontFamily: "Poppins",
+                                                    color: Colors.yellow,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: deviceWidth * 0.003,
+                                                ),
+                                                Text(
+                                                  textAlign: TextAlign.center,
+                                                  "Kelas dilakukan secara online menggunakan platform online (Google Meet atau Zoom), memungkinkan siswa belajar dari rumah dengan bimbingan langsung dari instruktur, kapanpun dan dimanapun.",
+                                                  style: TextStyle(
+                                                    fontSize:
+                                                        deviceWidth * 0.015,
+                                                    fontFamily: "Poppins",
+                                                    color: Colors.white,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: deviceWidth * 0.05,
+                                                ),
+                                              ],
+                                            ),
+                                          ))),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ]),
+                    //page 6
+                    Stack(
+                      children: [
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: Image.asset(
+                            "assets/shape_right.png",
+                            width: deviceWidth * 0.20,
+                          ),
+                        ),
+                        Container(
+                          width: deviceWidth,
+                          height: deviceHeight,
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: deviceWidth * 0.02,
+                              ),
+                              Text(
+                                textAlign: TextAlign.center,
+                                "TERTARIK?",
+                                style: TextStyle(
+                                  fontSize: deviceWidth * 0.05,
+                                  fontFamily: "Poppins",
+                                  color: Colors.yellow,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                height: deviceWidth * 0.0005,
+                              ),
+                              Text(
+                                textAlign: TextAlign.center,
+                                "isi data dibawah ini ya...",
+                                style: TextStyle(
+                                  fontSize: deviceWidth * 0.02,
+                                  fontFamily: "Poppins",
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                height: deviceWidth * 0.05,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 50, right: 50),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Container(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            textAlign: TextAlign.center,
+                                            "Nama Orang Tua",
+                                            style: TextStyle(
+                                              fontSize: deviceWidth * 0.01,
+                                              fontFamily: "Poppins",
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Container(
+                                            width: deviceWidth * 0.2,
+                                            child: TextField(
+                                              style: TextStyle(
+                                                fontFamily: "Poppins",
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              decoration: InputDecoration(
+                                                  filled: true,
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  fillColor: Colors.white),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            textAlign: TextAlign.center,
+                                            "No Telepon",
+                                            style: TextStyle(
+                                              fontSize: deviceWidth * 0.01,
+                                              fontFamily: "Poppins",
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Container(
+                                            width: deviceWidth * 0.2,
+                                            child: TextField(
+                                              style: TextStyle(
+                                                fontFamily: "Poppins",
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              decoration: InputDecoration(
+                                                  filled: true,
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  fillColor: Colors.white),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            textAlign: TextAlign.center,
+                                            "Email",
+                                            style: TextStyle(
+                                              fontSize: deviceWidth * 0.01,
+                                              fontFamily: "Poppins",
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Container(
+                                            width: deviceWidth * 0.2,
+                                            child: TextField(
+                                              style: TextStyle(
+                                                fontFamily: "Poppins",
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              decoration: InputDecoration(
+                                                  filled: true,
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  fillColor: Colors.white),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: deviceWidth * 0.02,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 50, right: 50),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Container(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            textAlign: TextAlign.center,
+                                            "Nama Siswa",
+                                            style: TextStyle(
+                                              fontSize: deviceWidth * 0.01,
+                                              fontFamily: "Poppins",
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Container(
+                                            width: deviceWidth * 0.2,
+                                            child: TextField(
+                                              style: TextStyle(
+                                                fontFamily: "Poppins",
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              decoration: InputDecoration(
+                                                  filled: true,
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  fillColor: Colors.white),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            textAlign: TextAlign.center,
+                                            "Umur Siswa",
+                                            style: TextStyle(
+                                              fontSize: deviceWidth * 0.01,
+                                              fontFamily: "Poppins",
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Container(
+                                            width: deviceWidth * 0.1,
+                                            child: TextField(
+                                              style: TextStyle(
+                                                fontFamily: "Poppins",
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              decoration: InputDecoration(
+                                                  filled: true,
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  fillColor: Colors.white),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            textAlign: TextAlign.center,
+                                            "Alamat",
+                                            style: TextStyle(
+                                              fontSize: deviceWidth * 0.01,
+                                              fontFamily: "Poppins",
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Container(
+                                            width: deviceWidth * 0.3,
+                                            child: TextField(
+                                              style: TextStyle(
+                                                fontFamily: "Poppins",
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              decoration: InputDecoration(
+                                                  filled: true,
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          10))),
+                                                  fillColor: Colors.white),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: deviceWidth * 0.02,
+                              ),
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Checkbox(
+                                        value: _KelasMerakit,
+                                        onChanged: (bool? value) {
+                                          setState(() {
+                                            _KelasMerakit = value ?? false;
+                                          });
+                                        }),
+                                    Text(
+                                      textAlign: TextAlign.center,
+                                      "Kelas Merakit Robot",
+                                      style: TextStyle(
+                                        fontSize: deviceWidth * 0.01,
+                                        fontFamily: "Poppins",
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    )
                   ]))));
     } else {
       return Scaffold(
