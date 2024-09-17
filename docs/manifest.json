@@ -1,11 +1,11 @@
 {
-    "name": "kodingyuk_web",
-    "short_name": "kodingyuk_web",
+    "name": "KodingYuk",
+    "short_name": "KodingYuk - Kelas Robotik dan Koding",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Kelas Robotik dan Koding untuk Anak. Gali potensi Anak dengan belajar Robotik dan Koding untuk Masa Depan mereka.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
