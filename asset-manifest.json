@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.09d3768e.css",
+    "main.js": "/static/js/main.98cd18cb.js",
+    "static/js/453.f79fac20.chunk.js": "/static/js/453.f79fac20.chunk.js",
+    "static/media/picture_5.png": "/static/media/picture_5.b9ceb2768d71d6b90614.png",
+    "static/media/woman.png": "/static/media/woman.6cf83ddf66f535fbc4dc.png",
+    "static/media/picture_2.png": "/static/media/picture_2.1eb8bb05785bab18a7a2.png",
+    "static/media/picture_4.png": "/static/media/picture_4.005a941da46279405a36.png",
+    "static/media/picture_3.png": "/static/media/picture_3.9827f7f821fdaa5f463b.png",
+    "static/media/picture_1.png": "/static/media/picture_1.8b736a396b68a9c8b059.png",
+    "static/media/picture_6.png": "/static/media/picture_6.9a26f5684ce9451d3cbd.png",
+    "static/media/logo.png": "/static/media/logo.2c5f7e7d571b295fc698.png",
+    "static/media/picture_7.png": "/static/media/picture_7.4bc3b24f62b453a70332.png",
+    "static/media/scratch_logo.png": "/static/media/scratch_logo.3f22dec4017d8ee2e2fe.png",
+    "static/media/mrt_logo.png": "/static/media/mrt_logo.1c22fdc49995dc743ca6.png",
+    "static/media/python_logo.png": "/static/media/python_logo.f6b9de1b8fdbd208d056.png",
+    "index.html": "/index.html",
+    "main.09d3768e.css.map": "/static/css/main.09d3768e.css.map",
+    "main.98cd18cb.js.map": "/static/js/main.98cd18cb.js.map",
+    "453.f79fac20.chunk.js.map": "/static/js/453.f79fac20.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09d3768e.css",
+    "static/js/main.98cd18cb.js"
+  ]
+}
